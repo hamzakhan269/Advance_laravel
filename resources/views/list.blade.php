@@ -29,10 +29,13 @@
       <td>{{$item->name}}</td>
       <td>{{$item->name}}</td>
       <td>{{$item->address}}</td>
-      <td><a href="delete/{{$item->id}}"><i class="fa fa-trash"> </i></a></td>
+      <td>
+      <a href="delete/{{$item->id}}"><i class="fa fa-trash"> </i></a>
+      <a href="edit/{{$item->id}}"><i class="fa fa-edit"> </i></a>
+      </td>
     </tr>
 	@endforeach
-
+</tbody>
 </table>
 	<!-- <p>{{$item->name}}</p> -->
 

@@ -14,6 +14,7 @@
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+Route::group(['middleware'=>"web"],function(){
 Route::get('/export','Products@excelData');
 Route::get('event','UsersAuth@index');
 Route::get('products','ProductController@index');
@@ -22,6 +23,16 @@ Route::get('list','RestoController@list');
 Route::post('add','RestoController@add');
 Route::view('add','add');
 Route::get('/delete/{id}', 'RestoController@delete');
+Route::get('/edit/{id}', 'RestoController@edit');
+Route::post('edit', 'RestoController@update');
+Route::view('register','register');
+Route::post('register','RestoController@register');
+Route::view('login','login');
+Route::post('login','RestoController@login');
+}); 
+
+
+
 
 
 

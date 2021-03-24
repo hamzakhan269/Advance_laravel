@@ -23,8 +23,14 @@
       <a class="nav-item nav-link" href="/list">List</a>
       <a class="nav-item nav-link" href="/add">Add</a>
       <a class="nav-item nav-link " href="#">Search</a>
-      <a class="nav-item nav-link " href="#">Login</a>
-      <a class="nav-item nav-link " href="#">Register</a>
+    
+      @if(Session::get('user'))
+      <a class="nav-item nav-link " href="#">Welcome {{Session::get('user')}}</a>
+      @else
+      <a class="nav-item nav-link " href="login">Login</a>
+      <a class="nav-item nav-link " href="register">Register</a>
+      @endif
+
 
     </div>
   </div>
